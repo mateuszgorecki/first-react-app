@@ -1,7 +1,10 @@
-const PortfolioPage = (second) => {
+import PageWrapper from '../components/layout/PageWrapper'
 
+const PortfolioPage = (props) => {
   return (
-    <h1>PortfolioPage</h1>
+    <PageWrapper>
+      <h1>PortfolioPage</h1>
+    </PageWrapper>
   )
 }
 

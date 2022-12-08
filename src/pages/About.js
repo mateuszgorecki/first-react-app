@@ -1,7 +1,10 @@
-const AboutPage = (second) => {
+import PageWrapper from '../components/layout/PageWrapper'
 
+const AboutPage = (props) => {
   return (
-    <h1>AboutPage</h1>
+      <PageWrapper>
+        <h1>AboutPage</h1>
+      </PageWrapper>
   )
 }
 

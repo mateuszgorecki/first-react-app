@@ -1,0 +1,11 @@
+@import './variables';
+
+.wrapper {
+  border-radius: .8rem;
+  background-color: $darkgrey;
+  filter: drop-shadow(0 .2rem 1rem $black);
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

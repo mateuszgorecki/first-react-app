@@ -1,12 +1,14 @@
-const Page404 = (second) => {
+import PageWrapper from '../components/layout/PageWrapper'
+
+const Page404 = (props) => {
   return (
-    <div>
+    <PageWrapper>
       <h1>Page not found 😕 </h1>
       <p>
         There's nothing page you looking for. Choose one from existing page
         above.
       </p>
-    </div>
+    </PageWrapper>
   )
 }
 

@@ -1,9 +1,10 @@
+import PageWrapper from '../components/layout/PageWrapper'
 
-const ContactPage = (second) => {
+const ContactPage = (props) => {
   return (
-    <div className='classes'>
+    <PageWrapper>
       <h1>ContactPage</h1>
-    </div>
+    </PageWrapper>
   )
 }
 
