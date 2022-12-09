@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Nabla&family=Saira+Stencil+One&family=Train+One&family=Zen+Tokyo+Zoo&display=swap');
+@import './variables';
+
+.lol {
+  font-family: 'Bungee Inline', cursive;
+
+  font-family: 'Bungee Outline', cursive;
+
+  font-family: 'Bungee Shade', cursive;
+
+  font-family: 'Nabla', cursive;
+
+  font-family: 'Saira Stencil One', cursive;
+
+  font-family: 'Train One', cursive;
+
+  font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+
+.wrapper {
+  padding: 1rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+
+  h1 {
+    font-size: 8rem;
+    font-family: 'Saira Stencil One', cursive;
+    line-height: 9rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    max-width: 50rem;
+    margin: 1rem 0 0 0;
+  }
+}

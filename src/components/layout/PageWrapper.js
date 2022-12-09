@@ -5,17 +5,19 @@ const PageWrapper = (props) => {
   return (
     <motion.div
       initial={{
-        width: 0,
-
+        opacity: 0,
+        y: 50
       }}
       animate={{
-        width: '80%',
+        opacity: 1,
+        y: 0,
       }}
       exit={{
-        x: window.innerWidth,
-        transition: { duration: 0.2 },
+        opacity: 0,
+        y: 0,
+        transition: { duration: .5 },
       }}
-      className={classes.wrapper}
+      className={`${classes.wrapper} ${props.className}`}
     >
       {props.children}
     </motion.div>
