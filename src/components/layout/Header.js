@@ -66,7 +66,6 @@ const Header = (second) => {
         <div className={classes.socials}>
           <NavLink
             to='/facebook'
-            target='_blank'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -77,7 +76,6 @@ const Header = (second) => {
           </NavLink>
           <NavLink
             to='/github'
-            target='_blank'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
