@@ -1,0 +1,72 @@
+@import './variables';
+
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    width: 30rem;
+
+    input {
+      height: 2rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 8rem
+    }
+
+    input, textarea {
+      outline: none;
+      border: none;
+      border-radius: .3rem;
+      padding: .1rem .3rem;
+      background-color: $green;
+      width: 100%;
+
+      &::placeholder {
+        color: $black;
+        font-size: .9rem;
+      }
+    }
+
+    button {
+      width: fit-content;
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+      color: $white;
+      font-size: 1rem;
+      transition: all 0.3s ease-out;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 100%;
+        background-color: $white;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover,
+      &:active {
+        color: $green;
+
+        &::before {
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
