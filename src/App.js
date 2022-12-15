@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 
-import Header from './components/layout/Header'
+import Header from './components/Header'
 import Page404 from './pages/404'
 import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
