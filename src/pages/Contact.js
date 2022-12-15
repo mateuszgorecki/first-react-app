@@ -11,7 +11,7 @@ const ContactPage = (props) => {
 
   return (
     <PageWrapper className={classes.wrapper}>
-      <h1>ContactPage</h1>
+      <h1>Contact</h1>
 
       <form className={classes.container}>
         <Input

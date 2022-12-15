@@ -8,15 +8,15 @@ import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
 import HomePage from './pages/Home'
 import PortfolioPage from './pages/Portfolio'
-import Footer from './components/layout/Footer'
+// import Footer from './components/layout/Footer'
 
-import classes from './assets/scss/App.module.scss'
+import './assets/scss/_global.scss'
 
 function App() {
   const location = useLocation()
 
   return (
-    <div className={classes}>
+    <div>
       <Header />
       <main>
         <AnimatePresence>
