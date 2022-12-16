@@ -42,18 +42,17 @@
     padding: 0 5px !important;
     z-index: 0;
   }
-
-  &[data-darkmode='true'] {
-    .dark {
-      opacity: 1;
-    }
-
-    .icon {
-      color: rgba(41, 14, 151, 1);
-    }
-  }
 }
 
+.on {
+  .dark {
+    opacity: 1;
+  }
+
+  .icon {
+    color: rgba(41, 14, 151, 1);
+  }
+}
 .handle {
   height: 30px;
   width: 30px;
