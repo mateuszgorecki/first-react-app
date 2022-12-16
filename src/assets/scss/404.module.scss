@@ -21,7 +21,7 @@
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $darkgrey;
     transition: all 0.3s ease-out;
     position: relative;
 
@@ -34,16 +34,30 @@
       transform: translateX(-50%);
       height: 2px;
       width: 0;
-      background-color: $green;
+      background-color: $orange;
       transition: all 0.25s ease-out;
     }
 
     &:hover{
-      color: $green;
+      color: $orange;
 
       &::before {
         width: 100%;
       }
+    }
+  }
+}
+
+.dark {
+  a {
+    color: $blue-gray;
+
+    &::before {
+      background-color: $purple;
+    }
+
+    &:hover{
+      color: $purple;
     }
   }
 }

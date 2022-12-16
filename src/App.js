@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 
@@ -11,9 +11,18 @@ import PortfolioPage from './pages/Portfolio'
 // import Footer from './components/layout/Footer'
 
 import './assets/scss/_global.scss'
+import ThemeContext from './store/theme-context'
 
 function App() {
   const location = useLocation()
+
+  const ctx = useContext(ThemeContext)
+  const isDark = ctx.isDarkTheme
+
+  const body = document.querySelector('body')
+
+  if (isDark) body.classList.add('dark')
+  else body.classList.remove('dark')
 
   return (
     <div>

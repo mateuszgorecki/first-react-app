@@ -8,10 +8,11 @@
 }
 
 body {
-  background-color: $darkgrey;
-  color: #eee;
+  color: $darkgrey;
+  background-color: $blue-gray;
   max-width: 100vw;
   overflow: hidden;
+  transition: all 300ms ease-in-out;
 }
 
 main {
@@ -33,3 +34,7 @@ a {
   text-decoration: none;
 }
 
+.dark {
+  color: $blue-gray;
+  background-color: $darkgrey;
+}

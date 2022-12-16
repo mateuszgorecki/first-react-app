@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
-import { AuthContextProvider } from './store/theme-context'
+import { ThemeContextProvider } from './store/theme-context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <AuthContextProvider>
+    <ThemeContextProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </AuthContextProvider>
+    </ThemeContextProvider>
   </React.StrictMode>
 )

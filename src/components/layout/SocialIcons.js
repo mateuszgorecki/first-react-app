@@ -1,9 +1,17 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import classes from '../../assets/scss/Header.module.scss'
+import classes from '../../assets/scss/SocialIcons.module.scss'
+import ThemeContext from '../../store/theme-context'
 
 const SocialIcons = (props) => {
+
+  const ctx = useContext(ThemeContext)
+
+  const isDark = ctx.isDarkTheme
+
+  const darkClass = isDark ? classes.dark : ''
 return (
-  <div className={`${classes.socials} ${props.className}`}>
+  <div className={`${classes.socials} ${darkClass} ${props.className}`}>
   <NavLink to='/facebook'>
     <svg
       xmlns='http://www.w3.org/2000/svg'

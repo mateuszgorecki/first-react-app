@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion'
+import { useContext } from 'react'
 import classes from '../../assets/scss/PageWrapper.module.scss'
+import ThemeContext from '../../store/theme-context'
 
 const PageWrapper = (props) => {
+  const ctx = useContext(ThemeContext)
+
+  const isDark = ctx.isDarkTheme
+
+  const themeClasses = isDark ? classes.dark : classes.light
+
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: 50
+        y: 50,
       }}
       animate={{
         opacity: 1,
@@ -15,11 +23,14 @@ const PageWrapper = (props) => {
       exit={{
         opacity: 0,
         y: 0,
-        transition: { duration: .5 },
+        transition: { duration: 0.5 },
       }}
-      className={`${classes.wrapper} ${props.className}`}
     >
-      {props.children}
+      <div
+        className={` ${classes.wrapper} ${themeClasses} ${props.className}`}
+      >
+        {props.children}
+      </div>
     </motion.div>
   )
 }

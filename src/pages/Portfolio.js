@@ -1,10 +1,17 @@
 import PageWrapper from '../components/layout/PageWrapper'
 
 import classes from '../assets/scss/PortfolioPage.module.scss'
+import { useContext } from 'react'
+import ThemeContext from '../store/theme-context'
 
 const PortfolioPage = (props) => {
+  const ctx = useContext(ThemeContext)
+  const isDark = ctx.isDarkTheme
+
+  const darkClass = isDark ? classes.dark : ''
+
   return (
-    <PageWrapper className={classes.wrapper}>
+    <PageWrapper className={`${classes.wrapper} ${darkClass}`}>
       <h1>Portfolio</h1>
 
       <div className={classes.container}>

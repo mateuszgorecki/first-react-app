@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const AuthContext = React.createContext({
-isDarkTheme: false,
+const ThemeContext = React.createContext({
+  isDarkTheme: false,
+  changeTheme: () => {},
 })
 
-export const AuthContextProvider = (props) => {
-const contextValue = {
+export const ThemeContextProvider = (props) => {
+  const [isDark, setIsDark] = useState(false)
 
+  const changeThemeHandler = () => {
+    setIsDark((prev) => !prev)
+  }
+
+  const contextValue = {
+    isDarkTheme: isDark,
+    changeTheme: changeThemeHandler,
+  }
+
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      {props.children}
+    </ThemeContext.Provider>
+  )
 }
 
-  return <AuthContext.Provider value={contextValue}>{props.children}</AuthContext.Provider>
-}
+export default ThemeContext
