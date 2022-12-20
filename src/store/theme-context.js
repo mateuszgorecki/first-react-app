@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-localStorage.setItem('darkTheme', false)
-
 
 const ThemeContext = React.createContext({
   isDarkTheme: false,
@@ -11,7 +9,8 @@ const ThemeContext = React.createContext({
 
 export const ThemeContextProvider = (props) => {
   const storedTheme = localStorage.getItem('darkTheme')
-  const [isDark, setIsDark] = useState(storedTheme)
+  const token = storedTheme === 'false' ? false : true
+  const [isDark, setIsDark] = useState(token)
 
   const changeThemeHandler = () => {
     setIsDark((prev) => !prev)

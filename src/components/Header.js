@@ -1,6 +1,6 @@
 import ThemeButton from './ThemeButton'
 import MainNavigation from './MainNavigation'
-import SocialIcons from './layout/SocialIcons'
+// import SocialIcons from './layout/SocialIcons'
 import HeaderLogo from './HeaderLogo'
 import classes from '../assets/scss/Header.module.scss'
 import { useContext } from 'react'
@@ -17,9 +17,9 @@ const Header = () => {
       <div>
         <HeaderLogo />
         <MainNavigation />
-        <SocialIcons />
-      </div>
+        {/* <SocialIcons /> */}
       <ThemeButton />
+      </div>
     </header>
   )
 }

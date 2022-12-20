@@ -4,6 +4,8 @@
   border-radius: 0.8rem;
   display: flex;
   transition: all 300ms ease-in-out;
+  box-sizing: border-box;
+  max-height: 65vh;
 }
 
 .light {
