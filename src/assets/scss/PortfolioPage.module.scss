@@ -12,35 +12,16 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-
-    .page {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $orange;
-      border-radius: 1rem;
-      width: 18rem;
-      height: 25rem;
-      filter: drop-shadow(0 0 1rem rgba($black, 0.5));
-      transition: all 300ms ease-in-out;
-
-      p {
-        transition: all 300ms ease-in-out;
-        color: $darkgrey;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-    }
   }
 }
 
 .dark {
   .container {
-    .page {
+    & > a {
       background-color: $purple;
-      filter: drop-shadow(0 0 1rem rgba($black, 0.5));
+      filter: drop-shadow(0 0 1rem $dark-shadow);
 
-      p {
+      h2 {
         color: $blue-gray;
       }
     }

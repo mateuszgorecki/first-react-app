@@ -8,6 +8,7 @@ import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
 import HomePage from './pages/Home'
 import PortfolioPage from './pages/Portfolio'
+import PageDetails from './components/PageDetails'
 // import Footer from './components/layout/Footer'
 
 import './assets/scss/_global.scss'
@@ -21,8 +22,7 @@ function App() {
 
   const body = document.querySelector('body')
 
-  if (isDark) body.classList.add('dark')
-  else body.classList.remove('dark')
+  isDark ? body.classList.add('dark') : body.classList.remove('dark')
 
   return (
     <div>
@@ -34,19 +34,25 @@ function App() {
             key={location.pathname}
           >
             <Route
+            index
               path='/'
               element={<HomePage />}
             />
             <Route
-              path='/portfolio'
+              path='portfolio'
               element={<PortfolioPage />}
-            />
+            >
+            </Route>
+              <Route
+                path='portfolio/:pageID'
+                element={<PageDetails />}
+              />
             <Route
-              path='/about'
+              path='about'
               element={<AboutPage />}
             />
             <Route
-              path='/contact'
+              path='contact'
               element={<ContactPage />}
             />
             <Route

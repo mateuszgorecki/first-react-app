@@ -1,8 +1,11 @@
 import PageWrapper from '../components/layout/PageWrapper'
+import SinglePortfolioPage from '../components/SinglePortfolioPage'
 
 import classes from '../assets/scss/PortfolioPage.module.scss'
 import { useContext } from 'react'
 import ThemeContext from '../store/theme-context'
+import PAGES_DATA from '../components/pages-data'
+import { Outlet } from 'react-router-dom'
 
 const PortfolioPage = (props) => {
   const ctx = useContext(ThemeContext)
@@ -10,24 +13,24 @@ const PortfolioPage = (props) => {
 
   const darkClass = isDark ? classes.dark : ''
 
+  const pages = PAGES_DATA.map((page) => {
+    const { id, title, description, url, bgPhoto } = page
+    return (
+      <SinglePortfolioPage
+        key={id}
+        id={id}
+        title={title}
+        description={description}
+        url={url}
+      />
+    )
+  })
+
   return (
     <PageWrapper className={`${classes.wrapper} ${darkClass}`}>
       <h1>Portfolio</h1>
-
-      <div className={classes.container}>
-        <div className={classes.page}>
-          <p>Page no.1</p>
-        </div>
-        <div className={classes.page}>
-          <p>Page no.2</p>
-        </div>
-        <div className={classes.page}>
-          <p>Page no.3</p>
-        </div>
-        <div className={classes.page}>
-          <p>Page no.4</p>
-        </div>
-      </div>
+      <div className={classes.container}>{pages}</div>
+      <Outlet/>
     </PageWrapper>
   )
 }
