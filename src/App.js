@@ -63,7 +63,7 @@ function App() {
             ></Route>
             <Route
               path='portfolio/:pageID'
-              element={<PageDetails />}
+              element={<PageDetails isDark={isDark} />}
             />
             <Route
               path='about'

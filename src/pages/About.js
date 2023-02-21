@@ -17,7 +17,7 @@ const AboutPage = (props) => {
             alt='just me'
             className={classes.photo}
           />
-          <p>Mateusz Górecki</p>
+          <p>Mateusz Surname</p>
           <SocialIcons className={classes.socials}/>
         </div>
         <div className={classes.right}>

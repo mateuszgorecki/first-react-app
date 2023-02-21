@@ -5,6 +5,8 @@ import PAGES_DATA from './pages-data'
 import classes from '../assets/scss/PageDetails.module.scss'
 
 const PageDetails = (props) => {
+  const darkClass = props.isDark ? classes.dark : ''
+
   const params = useParams()
   const { pageID } = params
 
@@ -15,7 +17,7 @@ const PageDetails = (props) => {
         <PageWrapper className={classes.wrapper}>
           <div className={classes['wrapper-photo']}>
             <div
-              className={classes.photo}
+              className={`${classes.photo} ${darkClass}`}
             >
               <p>{page.title}</p>
             </div>
