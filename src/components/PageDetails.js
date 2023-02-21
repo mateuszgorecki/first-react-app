@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import PageWrapper from './layout/PageWrapper'
 import PAGES_DATA from './pages-data'
@@ -15,11 +14,11 @@ const PageDetails = (props) => {
       details = (
         <PageWrapper className={classes.wrapper}>
           <div className={classes['wrapper-photo']}>
-            <img
-              src={page.bgPhoto}
+            <div
               className={classes.photo}
-              alt=''
-            />
+            >
+              <p>{page.title}</p>
+            </div>
           </div>
           <div className={classes['wrapper-text']}>
             <h2 className={classes.title}>{page.title}</h2>

@@ -59,7 +59,7 @@ function App() {
             />
             <Route
               path='portfolio'
-              element={<PortfolioPage />}
+              element={<PortfolioPage isDark={isDark} />}
             ></Route>
             <Route
               path='portfolio/:pageID'
@@ -71,7 +71,7 @@ function App() {
             />
             <Route
               path='contact'
-              element={<ContactPage />}
+              element={<ContactPage isDark={isDark} />}
             />
             <Route
               path='*'

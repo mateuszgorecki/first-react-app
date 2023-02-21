@@ -1,14 +1,9 @@
 import PageWrapper from '../components/layout/PageWrapper'
 import Input from '../components/Input'
 import classes from '../assets/scss/ContactPage.module.scss'
-import { useContext } from 'react'
-import ThemeContext from '../store/theme-context'
 
 const ContactPage = (props) => {
-  const ctx = useContext(ThemeContext)
-  const isDark = ctx.isDarkTheme
-
-  const darkClass = isDark ? classes.dark : ''
+  const darkClass = props.isDark ? classes.dark : ''
 
   const submitHandler = (e) => {
     e.preventDefault()

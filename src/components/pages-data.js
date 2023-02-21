@@ -1,23 +1,18 @@
-import CoreLabPhoto from '../assets/images/ScreenShot-corelab.webp'
-import MadbitPhoto from '../assets/images/ScreenShot-madbit.webp'
-
 const PAGES_DATA = [
   {
-    id: 'core-lab',
-    title: 'Core-Lab',
-    description: 'Simple website for electronics service.',
-    url: 'https://core-lab.pl',
-    bgPhoto: CoreLabPhoto,
-    technologies: ['HTML', 'SCSS', 'JavaScript']
+    id: '1page',
+    title: 'First Page',
+    description: 'Incididunt adipisicing culpa est sit sint. Quis dolor ipsum quis Lorem nisi nisi ullamco voluptate officia officia aliquip. Ad do cillum reprehenderit aute Lorem Lorem non.',
+    url: 'https://example.com',
+    technologies: ['HTML', 'SCSS', 'JavaScript', 'PHP']
   },
   {
-    id: 'madbit',
-    title: 'Madbit',
+    id: '2page',
+    title: 'Second Page',
     description:
-      'Website for business that offers servicing companies in the field of cash registers, software and computer hardware.',
-    url: 'https://komfis.pl',
-    bgPhoto: MadbitPhoto,
-    technologies: ['HTML', 'SCSS', 'JavaScript']
+      'Qui laborum incididunt magna eu ex. Ea duis voluptate pariatur incididunt nulla voluptate eiusmod et est ex laboris occaecat cupidatat. Ullamco sint minim sint anim deserunt. Et id non eiusmod minim sit enim laborum nostrud est.',
+    url: 'https://example.com',
+    technologies: ['HTML', 'SCSS', 'JavaScript', 'PHP']
   },
 ]
 

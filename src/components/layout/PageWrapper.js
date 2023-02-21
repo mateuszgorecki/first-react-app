@@ -5,9 +5,7 @@ import ThemeContext from '../../store/theme-context'
 
 const PageWrapper = (props) => {
   const ctx = useContext(ThemeContext)
-
   const isDark = ctx.isDarkTheme
-
   const themeClasses = isDark ? classes.dark : classes.light
 
   return (

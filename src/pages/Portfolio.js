@@ -2,19 +2,14 @@ import PageWrapper from '../components/layout/PageWrapper'
 import SinglePortfolioPage from '../components/SinglePortfolioPage'
 
 import classes from '../assets/scss/PortfolioPage.module.scss'
-import { useContext } from 'react'
-import ThemeContext from '../store/theme-context'
 import PAGES_DATA from '../components/pages-data'
 import { Outlet } from 'react-router-dom'
 
 const PortfolioPage = (props) => {
-  const ctx = useContext(ThemeContext)
-  const isDark = ctx.isDarkTheme
-
-  const darkClass = isDark ? classes.dark : ''
+  const darkClass = props.isDark ? classes.dark : ''
 
   const pages = PAGES_DATA.map((page) => {
-    const { id, title, description, url, bgPhoto } = page
+    const { id, title, description, url } = page
     return (
       <SinglePortfolioPage
         key={id}
