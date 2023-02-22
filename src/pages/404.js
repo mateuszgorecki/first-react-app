@@ -6,8 +6,9 @@ import PageWrapper from '../components/layout/PageWrapper'
 import classes from '../assets/scss/404.module.scss'
 
 const Page404 = (props) => {
+  const darkClass = props.isDark ? classes.dark : ''
   return (
-    <PageWrapper className={`${classes.wrapper} `}>
+    <PageWrapper className={`${classes.wrapper} ${darkClass}`}>
       <h1>Page not found 😕 </h1>
       <div>
         <p>There's no page that you looking for.</p>

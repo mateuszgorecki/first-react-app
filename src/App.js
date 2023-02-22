@@ -9,10 +9,10 @@ import ContactPage from './pages/Contact'
 import HomePage from './pages/Home'
 import PortfolioPage from './pages/Portfolio'
 import PageDetails from './components/PageDetails'
+import useTitle from './components/use-title'
 
 import './assets/scss/_global.scss'
 import ThemeContext from './store/theme-context'
-import { useEffect } from 'react'
 
 function App() {
   const location = useLocation()
@@ -24,24 +24,7 @@ function App() {
   const body = document.querySelector('body')
   isDark ? body.classList.add('dark') : body.classList.remove('dark')
 
-  useEffect(() => {
-    let title
-    if (pageTitle !== '/') {
-      title = pageTitle.charAt(1).toUpperCase() + pageTitle.slice(2)
-
-      if (title.indexOf('/') > 0) {
-        title =
-          title.substring(0, 9) +
-          ' - ' +
-          title.slice(10).charAt(0).toUpperCase() +
-          title.slice(11)
-      }
-    } else if (pageTitle === '/') {
-      title = 'Home'
-    }
-
-    document.title = title
-  }, [pageTitle])
+  useTitle(pageTitle)
 
   return (
     <div>
@@ -75,7 +58,7 @@ function App() {
             />
             <Route
               path='*'
-              element={<Page404 />}
+              element={<Page404 isDark={isDark} />}
             />
           </Routes>
         </AnimatePresence>
