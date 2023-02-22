@@ -17,6 +17,7 @@ import ThemeContext from './store/theme-context'
 function App() {
   const location = useLocation()
   const pageTitle = location.pathname
+  useTitle(pageTitle)
 
   const ctx = useContext(ThemeContext)
   const isDark = ctx.isDarkTheme
@@ -24,7 +25,6 @@ function App() {
   const body = document.querySelector('body')
   isDark ? body.classList.add('dark') : body.classList.remove('dark')
 
-  useTitle(pageTitle)
 
   return (
     <div>

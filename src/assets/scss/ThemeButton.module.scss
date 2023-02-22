@@ -1,3 +1,5 @@
+@import './variables';
+
 .container {
   height: 40px;
   width: 100px;
@@ -6,11 +8,13 @@
     rgba(253, 203, 50, 1) 0%,
     rgba(244, 56, 98, 1) 100.2%
   );
+  box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
+    -0.2rem -0.2rem 0.5rem rgba($white, 0.7);
   border-radius: 25px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 5px ;
+  padding: 0 5px;
   cursor: pointer;
   position: relative;
   // right: 50px;
@@ -24,6 +28,7 @@
   .dark {
     transition: all 0.2s ease-out;
     opacity: 0;
+    background-color: $darkgrey-light;
     background-image: linear-gradient(
       109.8deg,
       rgba(62, 5, 116, 1) -5.2%,
@@ -35,16 +40,19 @@
     top: 0;
     border-radius: 25px;
     height: 40px;
-    width: 100px ;
+    width: 100px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     padding: 0 5px;
     z-index: 0;
+    transform: scale(1.01);
   }
 }
 
 .on {
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba($black, 0.7),
+    -0.2rem -0.2rem 0.5rem $light-shadow;
   .dark {
     opacity: 1;
   }
@@ -60,7 +68,7 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  background-color: #fff;
+  background-color: $white;
   overflow: hidden;
   position: relative;
   z-index: 1;

@@ -11,11 +11,13 @@
 .light {
   background-color: $blue-gray;
   color: $darkgrey;
-  filter: drop-shadow(0 0.2rem 0.7rem rgba($darkgrey-light, 0.2));
+  box-shadow: 0.5rem 0.5rem 1rem $light-shadow-2,
+            -0.5rem -0.5rem 1rem rgba($white, 0.7);
 }
 
 .dark {
   background-color: $darkgrey;
-  filter: drop-shadow(0 0.2rem 1rem $black);
   color: $blue-gray;
+  box-shadow: 0.5rem 0.5rem 1rem rgba($black, 0.7),
+             -0.5rem -0.5rem 1rem $light-shadow;
 }

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import PageWrapper from './layout/PageWrapper'
 import PAGES_DATA from './pages-data'
 
@@ -14,10 +14,10 @@ const PageDetails = (props) => {
     let details
     if (page.id === pageID) {
       details = (
-        <PageWrapper className={classes.wrapper}>
+        <PageWrapper className={`${classes.wrapper} ${darkClass}`}>
           <div className={classes['wrapper-photo']}>
             <div
-              className={`${classes.photo} ${darkClass}`}
+              className={`${classes.photo} `}
             >
               <p>{page.title}</p>
             </div>
@@ -29,6 +29,7 @@ const PageDetails = (props) => {
             <p className={classes.bold}>Technologies:</p>
             <p className={classes.text}>{page.technologies.map(technology =>(technology + ' '))}</p>
           </div>
+          <NavLink to='/portfolio' className={classes['back-btn']}>&#x021A9; Back</NavLink>
         </PageWrapper>
       )
     }
