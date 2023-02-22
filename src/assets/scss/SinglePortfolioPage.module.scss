@@ -20,3 +20,15 @@
     position: absolute;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .page {
+    width: 100%;
+    height: 5rem;
+    -webkit-tap-highlight-color: transparent;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -41,11 +41,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   position: relative;
+  height: 90vh;
 
   & > div {
-    width: 80vw;
+    width: fit-content;
+    height: fit-content;
     position: absolute;
   }
 }
@@ -58,4 +59,29 @@ a {
 .dark {
   color: $blue-gray;
   background-color: $darkgrey;
+}
+
+@media screen and (min-width: 1921px) {
+  main {
+    height: 88vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #root {
+    & > div {
+      display: flex;
+      flex-direction: column-reverse;
+
+      main {
+        height: 90vh;
+
+        & > div {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
 }

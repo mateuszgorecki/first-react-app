@@ -6,71 +6,138 @@
   justify-content: start;
   padding: 2rem;
   gap: 6rem;
-  height: 65vh;
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
-    width: 30rem;
+    gap: 1rem;
+    width: 35rem;
 
     input {
-      height: 2rem;
+      height: 3rem;
     }
 
     textarea {
       resize: none;
-      height: 8rem
+      height: 10rem;
     }
 
-    input, textarea {
+    input,
+    textarea {
       outline: none;
       border: none;
-      border-radius: .3rem;
-      padding: .1rem .3rem;
-      background-color: $orange;
+      border-radius: 1.3rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      background-color: transparent;
       width: 100%;
       transition: all 300ms ease-in-out;
+      box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
+      -0.2rem -0.2rem 0.5rem rgba($white, 0.7);
 
       &::placeholder {
         color: $black;
-        font-size: .9rem;
+        font-size: 0.9rem;
         transition: color 300ms ease-in-out;
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
+        -0.2rem -0.2rem 0.5rem rgba($white, 0.7),
+        inset 0.2rem 0.2rem 0.2rem rgba($darkgrey-light, 0.1),
+        inset -0.2rem -0.2rem 0.5rem $white;
       }
     }
 
     button {
       width: fit-content;
-      height: 2rem;
       background-color: transparent;
       border: none;
       color: $darkgrey;
       font-size: 1rem;
+      text-decoration: none;
       transition: all 0.3s ease-out;
       position: relative;
       cursor: pointer;
+      border-radius: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      margin: .5rem 0 0 ;
+      transition: box-shadow 0.1s ease-out, color 0.2s ease-out;
+      box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
+        -0.2rem -0.2rem 0.5rem rgba($white, 0.7);
 
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 2px;
-        width: 100%;
-        background-color: $darkgrey;
-        transition: all 0.3s ease-out;
-      }
+        &:active {
+          box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
+            -0.2rem -0.2rem 0.5rem rgba($white, 0.7),
+            inset 0.2rem 0.2rem 0.2rem rgba($darkgrey-light, 0.1),
+            inset -0.2rem -0.2rem 0.5rem $white;
+        }
+      // &::before {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   height: 2px;
+      //   width: 100%;
+      //   background-color: $darkgrey;
+      //   transition: all 0.3s ease-out;
+      // }
 
       &:hover,
       &:active {
         color: $orange;
+      }
+    }
+  }
+}
 
-        &::before {
-          background-color: $orange;
+@media screen and (max-width: 576px) {
+  .wrapper {
+    padding: 1rem;
+    gap: 6rem;
+
+    .container {
+      gap: 0.5rem;
+      width: 100%;
+
+      input {
+        height: 3rem;
+      }
+
+      textarea {
+        height: 8rem;
+      }
+
+      input,
+      textarea {
+        padding: 1rem;
+
+        &::placeholder {
+          color: $black;
+          font-size: 0.9rem;
+          transition: color 300ms ease-in-out;
         }
+      }
+
+      button {
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        margin: 2rem 0 0 ;
+        -webkit-tap-highlight-color: transparent;
+
+        &:hover{
+          color: $darkgrey;
+        }
+
+        &:active{
+          color: $orange;
+        }
+
       }
     }
   }
@@ -78,29 +145,44 @@
 
 .dark {
   .container {
-    input, textarea {
-      background-color: $purple;
+    input,
+    textarea {
       color: $white;
+      box-shadow: 0.2rem 0.2rem 0.5rem rgba($black, 0.7),
+      -0.2rem -0.2rem 0.5rem $light-shadow;
 
       &::placeholder {
         color: $white;
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: 0.2rem 0.2rem 0.5rem rgba($black, 0.7),
+          -0.2rem -0.2rem 0.5rem $light-shadow,
+          inset 0.2rem 0.2rem 0.2rem rgba($black, 0.5),
+          inset -0.2rem -0.2rem 0.5rem $light-shadow;
       }
     }
 
     button {
       color: $blue-gray;
+      box-shadow: 0.2rem 0.2rem 0.5rem rgba($black, 0.7),
+      -0.2rem -0.2rem 0.5rem $light-shadow;
 
-      &::before {
-        background-color: $blue-gray;
+      &:active {
+        box-shadow: 0.2rem 0.2rem 0.5rem rgba($black, 0.7),
+          -0.2rem -0.2rem 0.5rem $light-shadow,
+          inset 0.2rem 0.2rem 0.2rem rgba($black, 0.5),
+          inset -0.2rem -0.2rem 0.5rem $light-shadow;
       }
 
-      &:hover,
-      &:active {
-        color: $purple;
 
-        &::before {
-          background-color: $purple;
-        }
+      &:hover{
+        color: $blue-gray;
+      }
+
+      &:active{
+        color: $purple;
       }
     }
   }

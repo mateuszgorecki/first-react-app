@@ -14,10 +14,11 @@ const ThemeButton = (props) => {
   const isDark = ctx.isDarkTheme
 
   const darkClass = isDark ? classes.on : ''
+  const classNames = `${props.className} ${classes.container} ${darkClass}`
 
   return (
     <div
-      className={`${classes.container} ${darkClass}`}
+      className={classNames}
       onClick={changeThemeHandler}
       style={{ justifyContent: isDark ? 'flex-end' : 'flex-start' }}
     >

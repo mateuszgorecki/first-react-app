@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65vh;
 
   h1 {
     @include SairaFont;
@@ -22,5 +21,15 @@
   p {
     max-width: 50rem;
     margin: 1rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    h1 {
+      @include SairaFont;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
   }
 }

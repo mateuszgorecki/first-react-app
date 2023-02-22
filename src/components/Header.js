@@ -18,7 +18,7 @@ const Header = () => {
         <HeaderLogo />
         <MainNavigation />
         {/* <SocialIcons /> */}
-      <ThemeButton />
+      <ThemeButton className={classes['theme-button']} />
       </div>
     </header>
   )
