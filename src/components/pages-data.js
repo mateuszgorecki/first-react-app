@@ -10,7 +10,7 @@ const PAGES_DATA = [
     id: 'second-page',
     title: 'Second Page',
     description:
-      'Qui laborum incididunt magna eu ex. Ea duis voluptate pariatur incididunt nulla voluptate eiusmod et est ex laboris occaecat cupidatat. Ullamco sint minim sint anim deserunt. Et id non eiusmod minim sit enim laborum nostrud est.',
+      'Qui laborum incididunt magna eu ex. Ea duis voluptate pariatur incididunt nulla voluptate eiusmod et est ex laboris occaecat cupidatat. Ullamco sint minim sint. ',
     url: 'https://example.com',
     technologies: ['HTML', 'SCSS', 'JavaScript', 'PHP']
   },

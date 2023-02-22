@@ -30,13 +30,13 @@ const AboutPage = (props) => {
             incididunt incididunt exercitation et occaecat voluptate in enim
             culpa.
           </p>
-          <p>
+          {/* <p>
             Nostrud eiusmod pariatur amet ullamco ea elit in qui. Et ut quis
             officia reprehenderit amet laborum ipsum minim commodo ipsum
             cupidatat. Dolore nisi sint do cillum consequat ea esse proident
             elit irure quis excepteur irure. Exercitation labore do nisi nulla
             excepteur irure tempor ea duis.
-          </p>
+          </p> */}
         </div>
       </div>
     </PageWrapper>
