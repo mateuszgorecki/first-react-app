@@ -1,4 +1,5 @@
 @import './variables';
+@import './global';
 
 .socials {
   display: flex;
@@ -6,8 +7,22 @@
   align-items: center;
 
   a {
+    @include lightShadow;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 300ms ease-out;
+
+    &:active {
+      @include lightShadowActive;
+    }
+
     svg {
-      width: 1.5rem;
+      display: inline-block;
+      width: 2rem;
       fill: $darkgrey;
       transition: all 300ms ease-out;
 
@@ -20,6 +35,12 @@
 
 .dark {
   a {
+    @include darkShadow;
+
+    &:active {
+      @include darkShadowActive;
+    }
+
     svg {
       fill: $blue-gray;
 
