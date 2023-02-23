@@ -80,8 +80,9 @@
 
 @media screen and (max-width: 576px) {
   .wrapper {
-    padding: 2rem 1rem;
+    padding: 1rem;
     gap: 2rem;
+    overflow: hidden;
 
     .container {
       gap: 0.7rem;

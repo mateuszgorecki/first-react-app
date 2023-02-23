@@ -3,17 +3,16 @@ import MainNavigation from './MainNavigation'
 // import SocialIcons from './layout/SocialIcons'
 import HeaderLogo from './HeaderLogo'
 import classes from '../assets/scss/Header.module.scss'
-import { useContext } from 'react'
+import  {forwardRef,  useContext } from 'react'
 import ThemeContext from '../store/theme-context'
 
-const Header = () => {
-
+const Header = forwardRef((props, ref) => {
   const ctx = useContext(ThemeContext)
   const isDark = ctx.isDarkTheme
 
   const darkClass = isDark ? classes.dark : ''
   return (
-    <header className={`${classes.header} ${darkClass}`}>
+    <header ref={ref} className={`${classes.header} ${darkClass}`}>
       <div>
         <HeaderLogo />
         <MainNavigation />
@@ -22,6 +21,6 @@ const Header = () => {
       </div>
     </header>
   )
-}
+})
 
 export default Header

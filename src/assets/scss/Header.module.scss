@@ -99,6 +99,7 @@
     }
   }
 }
+
 @media screen and (min-width: 1921px) {
   .header {
     height: 12vh;
@@ -207,7 +208,7 @@
   .header {
     @include lightShadow;
     width: 100vw;
-    height: 100px;
+    height: fit-content;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -229,19 +230,20 @@
 
     nav {
       width: 100%;
-      height: 100%;
+      height: fit-content;
 
       ul {
         width: 100%;
-        height: 100%;
+        height: fit-content;
         gap: 0;
         justify-content: space-around;
+        padding: 0.5rem 0;
 
         li {
           aspect-ratio: 1.618;
           display: flex;
           align-items: center;
-          width: 20vw;
+          width: 23vw;
 
           a {
             border-radius: 1rem;

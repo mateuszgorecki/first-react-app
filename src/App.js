@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 
@@ -13,11 +13,33 @@ import useTitle from './components/use-title'
 
 import './assets/scss/_global.scss'
 import ThemeContext from './store/theme-context'
+import DimensionsContext from './store/dimensions-context'
 
 function App() {
   const location = useLocation()
   const pageTitle = location.pathname
   useTitle(pageTitle)
+
+  const headerRef = useRef()
+
+  const [dimensions, setDimensions] = useState({
+    headerHeight: 0,
+    contentHeight: 0,
+  })
+
+  const ctx2 = useContext(DimensionsContext)
+  ctx2.getWindowHeight()
+  ctx2.getHeaderHeight(dimensions.headerHeight)
+
+
+  useEffect(() => {
+    if (headerRef.current) {
+      setDimensions({
+        headerHeight: headerRef.current.offsetHeight,
+        contentHeight: ctx2.windowHeight - ctx2.headerHeight,
+      })
+    }
+  }, [ctx2])
 
   const ctx = useContext(ThemeContext)
   const isDark = ctx.isDarkTheme
@@ -25,11 +47,10 @@ function App() {
   const body = document.querySelector('body')
   isDark ? body.classList.add('dark') : body.classList.remove('dark')
 
-
   return (
     <div>
-      <Header />
-      <main>
+      <Header ref={headerRef}/>
+      <main style={{height: dimensions.contentHeight}}>
         <AnimatePresence>
           <Routes
             location={location}

@@ -28,6 +28,7 @@
 @media screen and (max-width: 576px) {
   .wrapper {
     padding: 5rem 1rem;
+    overflow: hidden;
 
     h1 {
       @include SairaFont;
