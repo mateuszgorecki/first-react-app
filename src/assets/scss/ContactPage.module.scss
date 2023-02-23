@@ -27,6 +27,7 @@
 
     input,
     textarea {
+      -webkit-appearance: none;
       @include lightShadow;
       outline: none;
       border: none;
