@@ -14,7 +14,6 @@
     align-items: center;
     gap: 1rem;
     width: 35rem;
-    -webkit-appearance: none;
 
     input {
       height: 3rem;
@@ -81,7 +80,7 @@
 
 @media screen and (max-width: 576px) {
   .wrapper {
-    padding: 1rem;
+    padding: 2rem 1rem;
     gap: 6rem;
 
     .container {

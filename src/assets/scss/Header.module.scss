@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   height: 10vh;
+  background-color: $blue-gray;
 
   & > div {
     display: flex;
@@ -69,6 +70,35 @@
   }
 }
 
+.dark {
+  background-color: $darkgrey;
+
+  .logo svg {
+    fill: $blue-gray;
+  }
+
+  nav {
+    ul {
+      li {
+        a {
+          @include darkShadow;
+          color: $blue-gray;
+
+          &:hover,
+          &:active,
+          &.active {
+            color: $purple;
+          }
+
+          &:active,
+          &.active {
+            @include darkShadowActive;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: 1921px) {
   .header {
     height: 12vh;
@@ -175,10 +205,11 @@
 
 @media screen and (max-width: 576px) {
   .header {
+    @include lightShadow;
     width: 100vw;
-    height: 80px;
+    height: 100px;
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
@@ -226,36 +257,14 @@
     .theme-button {
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 0;
       transform: translate(-50%, -50%);
     }
   }
-}
 
-.dark {
-  .logo svg {
-    fill: $blue-gray;
-  }
-
-  nav {
-    ul {
-      li {
-        a {
-          @include darkShadow;
-          color: $blue-gray;
-
-          &:hover,
-          &:active,
-          &.active {
-            color: $purple;
-          }
-
-          &:active,
-          &.active {
-            @include darkShadowActive;
-          }
-        }
-      }
-    }
+  .dark {
+  @include darkShadow;
   }
 }
+
+
