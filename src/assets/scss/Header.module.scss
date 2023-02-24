@@ -209,7 +209,7 @@
     @include lightShadow;
     width: 100vw;
     height: fit-content;
-    // position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -259,7 +259,7 @@
     .theme-button {
       position: absolute;
       right: 5%;
-      top: 1%;
+      top: -600%;
     }
   }
 
