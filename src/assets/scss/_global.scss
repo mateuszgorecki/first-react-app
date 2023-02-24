@@ -95,17 +95,23 @@ a {
   body {
     overflow-x: hidden;
     overflow-y: auto;
+    height: 100vh;
 
     #root {
+      height: 100%;
+
       & > div {
+        height: 100%;
         display: flex;
         flex-direction: column-reverse;
 
         main {
           & > div {
-            height: 85%;
+            height: 90%;
             display: flex;
             align-items: center;
+            position: relative;
+            top: 10px;
           }
         }
       }
