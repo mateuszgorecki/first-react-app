@@ -54,6 +54,17 @@
   }
 }
 
+@media screen and (max-width: 1600px ){
+  .wrapper {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 1440px ){
+  .wrapper {
+    gap: 3rem;
+  }
+}
 
 @media screen and (max-width: 576px) {
   .wrapper {

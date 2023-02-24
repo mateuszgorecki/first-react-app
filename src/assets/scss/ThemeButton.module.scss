@@ -121,9 +121,6 @@
 
   .on {
     .handle {
-      &:active {
-        @include darkShadowActive;
-      }
       .icon {
         color: $purple;
       }

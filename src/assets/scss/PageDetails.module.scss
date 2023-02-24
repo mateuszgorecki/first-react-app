@@ -72,6 +72,30 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    padding: 2rem;
+    gap: 2rem;
+
+
+    &-text {
+      gap: .9rem;
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .text {
+        max-width: 80%;
+      }
+    }
+
+    .back-btn {
+      bottom: 1.5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .wrapper {
     padding: 1rem .5rem 5rem;

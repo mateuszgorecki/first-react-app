@@ -8,6 +8,7 @@
   justify-content: center;
   height: 10vh;
   background-color: $blue-gray;
+  transition: all 0.3s ease-in-out;
 
   & > div {
     display: flex;

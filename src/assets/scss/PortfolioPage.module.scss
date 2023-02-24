@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    height: 100%;
   }
 }
 
@@ -22,6 +23,31 @@
 
       h2 {
         color: $blue-gray;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    padding: 2rem;
+    gap: 1rem;
+
+    .container {
+      gap: 2rem;
+      height: 80%;
+    }
+  }
+
+  .dark {
+    .container {
+      & > a {
+        background-color: $purple;
+        filter: drop-shadow(0 0 1rem $dark-shadow);
+
+        h2 {
+          color: $blue-gray;
+        }
       }
     }
   }

@@ -13,7 +13,6 @@ export const DimensionsContextProvider = (props) => {
 
   const getHeaderHeightHandler = (height) => {
     setHeaderHeight(height)
-    // console.log('in context',height)
   }
 
   const getWindowHeightHandler = () => {

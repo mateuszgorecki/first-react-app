@@ -25,6 +25,28 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    h1 {
+      font-size: 6rem;
+      line-height: 7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    h1 {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .wrapper {
     padding: 5rem 1rem;
