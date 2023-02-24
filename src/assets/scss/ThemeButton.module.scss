@@ -73,34 +73,25 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 1440px){
+  .container {
+    height: 35px;
+    width: 70px;
+
+    .dark {
+      height: 35px;
+      width: 70px;
+    }
+  }
+
+  .handle {
+    height: 25px;
+    width: 25px;
+  }
+
+}
+
 @media screen and (max-width: 576px) {
-  // .container {
-  //   height: 50px;
-  //   width: 50px;
-  //   border-radius: 50%;
-  //   padding: 0;
-
-  //   .dark {
-  //     height: 50px;
-  //     width: 50px;
-  //     display: flex;
-  //     padding: 0;
-  //     z-index: 0;
-  //   }
-
-  //   .handle {
-  //     height: 50px;
-  //     width: 50px;
-  //     background-color: $blue-gray;
-  //     transition: all 0.2s ease-out;
-  //     transform: scale(1.02) !important;
-
-  //     &:active {
-  //       @include lightShadowActive;
-  //     }
-  //   }
-  // }
-
   .container {
     height: 15px;
     width: 40px;

@@ -132,78 +132,41 @@
   }
 }
 
-// @media screen and (max-width: 1440px) {
-//   .header {
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     height: 10vh;
+@media screen and (max-width: 1600px) {
+  .header {
+    height: 12vh;
 
-//     & > div {
-//       display: flex;
-//       flex-direction: row;
-//       padding: 1rem;
-//       justify-content: space-between;
-//       box-sizing: border-box;
-//       max-width: 1440px;
-//       width: 78vw;
-//       align-items: center;
-//     }
+    & > div {
+      padding: 1rem 0 0;
+      width: 78vw;
+    }
 
-//     .logo {
-//       display: flex;
-//       align-items: center;
+    .logo {
+      p {
+        font-size: 2rem;
+        width: 80px;
+      }
+    }
 
-//       p {
-//         font-family: 'Saira Stencil One', cursive;
-//         font-size: 2rem;
-//         line-height: 100%;
-//         width: 100px;
-//       }
-//     }
+    nav {
+      ul {
+        gap: 2rem;
 
-//     nav {
-//       display: flex;
-//       list-style-type: none;
-//       justify-content: center;
-//       align-items: center;
+        li {
+          a {
+            padding: 0.7rem 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
 
-//       ul {
-//         display: flex;
-//         list-style-type: none;
-//         justify-content: center;
-//         align-items: center;
-//         gap: 2rem;
-
-//         li {
-//           a {
-//             color: $darkgrey;
-//             transition: all 0.2s ease-out;
-//             position: relative;
-//             border-radius: 1.5rem;
-//             padding: 0.8rem 1.2rem;
-//             box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
-//               -0.2rem -0.2rem 0.5rem rgba($white, 0.7);
-
-//             &:hover,
-//             &:active,
-//             &.active {
-//               color: $orange;
-//             }
-
-//             &:active,
-//             &.active {
-//               box-shadow: 0.2rem 0.2rem 0.5rem $light-shadow-2,
-//                 -0.2rem -0.2rem 0.5rem rgba($white, 0.7),
-//                 inset 0.2rem 0.2rem 0.2rem rgba($darkgrey-light, 0.1),
-//                 inset -0.2rem -0.2rem 0.5rem $white;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 14vh;
+  }
+}
 
 @media screen and (max-width: 576px) {
   .header {
@@ -265,8 +228,6 @@
   }
 
   .dark {
-  @include darkShadow;
+    @include darkShadow;
   }
 }
-
-
