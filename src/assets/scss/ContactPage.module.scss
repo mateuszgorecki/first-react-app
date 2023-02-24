@@ -112,6 +112,42 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .wrapper {
+    padding: 3rem;
+    gap: 4rem;
+
+    .container {
+      gap: 1rem;
+      width: 100%;
+
+      input {
+        height: 4rem;
+      }
+
+      textarea {
+        height: 15rem;
+      }
+
+      input,
+      textarea {
+        border-radius: 2rem;
+        padding: 1.2rem;
+
+        &::placeholder {
+          font-size: 1.1rem;
+        }
+      }
+
+      button {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.4rem;
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .wrapper {
     padding: 1rem;

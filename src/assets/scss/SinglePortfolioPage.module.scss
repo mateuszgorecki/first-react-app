@@ -29,6 +29,19 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .page {
+    width: 100%;
+    height: unset;
+    aspect-ratio: 32/9;
+
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .page {
     width: 100%;

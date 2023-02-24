@@ -31,6 +31,14 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    max-height: unset;
+    aspect-ratio: unset;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .wrapper {
     border-radius: 0.8rem;

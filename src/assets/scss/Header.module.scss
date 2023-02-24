@@ -143,7 +143,6 @@
 
     .logo {
       p {
-        font-size: 2rem;
         width: 80px;
       }
     }
@@ -165,6 +164,42 @@
 @media screen and (max-width: 1440px) {
   .header {
     height: 14vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    height: 10vh;
+
+    & > div {
+      max-width: unset;
+      width: 85vw;
+    }
+
+    .logo {
+      p {
+        width: 50px;
+      }
+    }
+
+    nav {
+      ul {
+        gap: 1.2rem;
+
+        li {
+          a {
+            border-radius: 1.5rem;
+            padding: 0.8rem 1.2rem;
+          }
+        }
+      }
+    }
   }
 }
 

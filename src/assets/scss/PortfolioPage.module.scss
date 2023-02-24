@@ -53,6 +53,33 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .wrapper {
+    gap: 2rem;
+
+    .container {
+      gap: 1rem;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  .dark {
+    .container {
+      & > a {
+        background-color: $purple;
+        filter: drop-shadow(0 0 1rem $dark-shadow);
+
+        h2 {
+          color: $blue-gray;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .wrapper {
     padding: 2rem 1.5rem;
