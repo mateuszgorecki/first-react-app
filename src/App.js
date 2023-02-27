@@ -31,6 +31,13 @@ function App() {
   ctx2.getWindowHeight()
   ctx2.getHeaderHeight(dimensions.headerHeight)
 
+  // memory leaks or smth -> page not works properly
+  // if (window) {
+  //   window.addEventListener('resize', () => {
+  //     ctx2.getWindowHeight()
+  //     ctx2.getHeaderHeight(dimensions.headerHeight)
+  //   })
+  // }
 
   useEffect(() => {
     if (headerRef.current) {
@@ -49,8 +56,8 @@ function App() {
 
   return (
     <div>
-      <Header ref={headerRef}/>
-      <main style={{height: dimensions.contentHeight}}>
+      <Header ref={headerRef} />
+      <main style={{ height: dimensions.contentHeight }}>
         <AnimatePresence>
           <Routes
             location={location}

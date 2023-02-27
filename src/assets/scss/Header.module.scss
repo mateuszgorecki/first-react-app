@@ -203,6 +203,35 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    height: 9vh;
+
+    & > div {
+      width: 90vw;
+    }
+
+    .logo {
+      p {
+        width: 30px;
+      }
+    }
+
+    nav {
+      ul {
+        gap: 0.8rem;
+
+        li {
+          a {
+            border-radius: 1.2rem;
+            padding: 0.6rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .header {
     @include lightShadow;
