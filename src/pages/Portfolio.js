@@ -24,8 +24,10 @@ const PortfolioPage = (props) => {
   return (
     <PageWrapper className={`${classes.wrapper} ${darkClass}`}>
       <h1>Portfolio</h1>
-      <div className={classes.container}>{pages}</div>
-      <Outlet/>
+      <div className={classes.container}>
+        <div>{pages}</div>
+      </div>
+      <Outlet />
     </PageWrapper>
   )
 }
